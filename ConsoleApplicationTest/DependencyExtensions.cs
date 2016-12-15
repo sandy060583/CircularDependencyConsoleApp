@@ -68,6 +68,13 @@ namespace ConsoleApplicationTest
             return cycles;
         }
 
+        /// <summary>
+        /// Find Cycles 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="nodes"></param>
+        /// <param name="edges"></param>
+        /// <returns></returns>
         public static List<List<T>> FindCycles<T>(this IEnumerable<T> nodes, Func<T, IEnumerable<T>> edges)
         {
             var cycles = new List<List<T>>();
@@ -77,6 +84,13 @@ namespace ConsoleApplicationTest
             return cycles;
         }
 
+        /// <summary>
+        /// Find Cycles
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="TValueList"></typeparam>
+        /// <param name="listDictionary"></param>
+        /// <returns></returns>
         public static List<List<T>> FindCycles<T, TValueList>(this IDictionary<T, TValueList> listDictionary)
             where TValueList : class, IEnumerable<T>
         {
